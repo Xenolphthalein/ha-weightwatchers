@@ -1,0 +1,46 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "WeightWatchers",
+        "description": "Enter your WeightWatchers account details.",
+        "data": {
+          "region": "Region",
+          "username": "Username / email",
+          "password": "Password"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Reauthenticate WeightWatchers",
+        "description": "Your WeightWatchers credentials are no longer valid.",
+        "data": {
+          "username": "Username / email",
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to WeightWatchers.",
+      "invalid_auth": "Authentication failed. Check username, password, and region.",
+      "unknown": "Unexpected error occurred."
+    },
+    "abort": {
+      "already_configured": "This WeightWatchers account is already configured.",
+      "wrong_account": "Reauthentication must use the same account."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "WeightWatchers options",
+        "description": "Adjust which region endpoint this account uses.",
+        "data": {
+          "region": "Region"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "Another entry already uses this username in that region."
+    }
+  }
+}
