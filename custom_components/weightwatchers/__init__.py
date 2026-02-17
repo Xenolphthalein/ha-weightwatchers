@@ -15,6 +15,7 @@ from .coordinator import WeightWatchersDataUpdateCoordinator
 
 CONFIG_SCHEMA = cv.config_entry_only_config_schema(DOMAIN)
 
+
 async def async_setup(hass: HomeAssistant, config: ConfigType) -> bool:
     """Set up the integration from YAML (not used)."""
     hass.data.setdefault(DOMAIN, {})
