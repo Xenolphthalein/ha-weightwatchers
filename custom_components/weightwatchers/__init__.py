@@ -6,13 +6,16 @@ from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import CONF_PASSWORD, CONF_USERNAME
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
+from homeassistant.helpers import config_validation as cv
+from homeassistant.helpers.typing import ConfigType
 
 from .api import WeightWatchersApiClient
 from .const import CONF_REGION, DOMAIN, PLATFORMS, REGION_TO_DOMAIN
 from .coordinator import WeightWatchersDataUpdateCoordinator
 
+CONFIG_SCHEMA = cv.config_entry_only_config_schema(DOMAIN)
 
-async def async_setup(hass: HomeAssistant, config: dict) -> bool:
+async def async_setup(hass: HomeAssistant, config: ConfigType) -> bool:
     """Set up the integration from YAML (not used)."""
     hass.data.setdefault(DOMAIN, {})
     return True
