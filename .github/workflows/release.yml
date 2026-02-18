@@ -38,12 +38,14 @@ jobs:
             exit 1
           fi
 
-      - name: Generate release notes with git-cliff
-        id: git_cliff
-        uses: orhun/git-cliff-action@v4
+      - name: Install git-cliff
+        uses: taiki-e/install-action@v2
         with:
-          config: cliff.toml
-          args: --latest --strip header
+          tool: git-cliff
+
+      - name: Generate release notes with git-cliff
+        shell: bash
+        run: git-cliff --config cliff.toml --latest --strip header > RELEASE_NOTES.md
 
       - name: Build HACS zip asset
         shell: bash
@@ -57,6 +59,6 @@ jobs:
         with:
           name: ${{ github.ref_name }}
           tag_name: ${{ github.ref_name }}
-          body: ${{ steps.git_cliff.outputs.content }}
+          body_path: RELEASE_NOTES.md
           files: dist/weight_watchers.zip
           fail_on_unmatched_files: true
