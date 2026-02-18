@@ -1,8 +1,7 @@
 # Weight Watchers for Home Assistant
+[![hacs](https://github.com/Xenolphthalein/ha-weight-watchers/actions/workflows/hacs.yml/badge.svg)](https://github.com/Xenolphthalein/ha-weight-watchers/actions/workflows/hacs.yml) [![hassfest](https://github.com/Xenolphthalein/ha-weight-watchers/actions/workflows/hassfest.yml/badge.svg)](https://github.com/Xenolphthalein/ha-weight-watchers/actions/workflows/hassfest.yml)
 
 Custom Home Assistant integration for reading Weight Watchers points data.
-
-Maintained by [`Xenolphthalein`](https://github.com/Xenolphthalein).
 
 ## Features
 
@@ -23,6 +22,8 @@ Entity IDs default to email-based naming, for example:
 - `sensor.weight_watchers_jane_example_com_daily_activity_points_earned`
 
 ## Installation
+
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Xenolphthalein&repository=ha-weight-watchers&category=Integration)
 
 ### HACS (recommended)
 
