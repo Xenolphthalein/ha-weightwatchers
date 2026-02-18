@@ -2,6 +2,7 @@
   "name": "Weight Watchers",
   "render_readme": true,
   "zip_release": true,
+  "filename": "weight_watchers.zip",
   "content_in_root": false,
   "homeassistant": "2024.8.0"
 }
