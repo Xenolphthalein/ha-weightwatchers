@@ -1,6 +1,6 @@
-# WeightWatchers for Home Assistant
+# Weight Watchers for Home Assistant
 
-Custom Home Assistant integration for reading WeightWatchers points data.
+Custom Home Assistant integration for reading Weight Watchers points data.
 
 Maintained by [`Xenolphthalein`](https://github.com/Xenolphthalein).
 
@@ -9,7 +9,7 @@ Maintained by [`Xenolphthalein`](https://github.com/Xenolphthalein).
 - Config flow setup from the Home Assistant UI
 - Automatic reauthentication when session cookies expire
 - Multiple account support (one config entry per WW account)
-- Cloud polling via official WeightWatchers web endpoints
+- Cloud polling via official Weight Watchers web endpoints
 
 ## Sensors
 
@@ -20,24 +20,24 @@ Maintained by [`Xenolphthalein`](https://github.com/Xenolphthalein).
 
 Entity IDs default to email-based naming, for example:
 
-- `sensor.weightwatchers_jane_example_com_daily_activity_points_earned`
+- `sensor.weight_watchers_jane_example_com_daily_activity_points_earned`
 
 ## Installation
 
 ### HACS (recommended)
 
 1. Open HACS in Home Assistant.
-2. Add `https://github.com/Xenolphthalein/ha-weightwatchers` as a custom repository.
+2. Add `https://github.com/Xenolphthalein/ha-weight-watchers` as a custom repository.
 3. Select category: `Integration`.
-4. Install `WeightWatchers`.
+4. Install `Weight Watchers`.
 5. Restart Home Assistant.
 
 ### Manual
 
-1. Copy `custom_components/weightwatchers` into your Home Assistant config directory under `custom_components`.
+1. Copy `custom_components/weight_watchers` into your Home Assistant config directory under `custom_components`.
 2. Restart Home Assistant.
 3. Go to **Settings -> Devices & Services -> Add Integration**.
-4. Search for **WeightWatchers**.
+4. Search for **Weight Watchers**.
 
 ## Configuration
 
@@ -72,4 +72,4 @@ This project is licensed under the Unlicense. See `LICENSE`.
 
 ## Disclaimer
 
-This project is not affiliated with, endorsed by, or sponsored by WeightWatchers.
+This project is not affiliated with, endorsed by, or sponsored by Weight Watchers.

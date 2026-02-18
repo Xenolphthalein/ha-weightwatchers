@@ -1,4 +1,4 @@
-"""The WeightWatchers integration."""
+"""The Weight Watchers integration."""
 
 from __future__ import annotations
 
@@ -23,11 +23,11 @@ async def async_setup(hass: HomeAssistant, config: ConfigType) -> bool:
 
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
-    """Set up WeightWatchers from a config entry."""
+    """Set up Weight Watchers from a config entry."""
     hass.data.setdefault(DOMAIN, {})
 
     entry_data = dict(entry.data)
-    expected_title = f"WeightWatchers ({entry_data[CONF_USERNAME]})"
+    expected_title = f"Weight Watchers ({entry_data[CONF_USERNAME]})"
     if entry.title != expected_title:
         hass.config_entries.async_update_entry(
             entry,

@@ -1,4 +1,4 @@
-"""Data coordinator for WeightWatchers."""
+"""Data coordinator for Weight Watchers."""
 
 from __future__ import annotations
 
@@ -24,7 +24,7 @@ _LOGGER = logging.getLogger(__name__)
 class WeightWatchersDataUpdateCoordinator(
     DataUpdateCoordinator[WeightWatchersPointsSnapshot]
 ):
-    """Coordinate WeightWatchers API polling."""
+    """Coordinate Weight Watchers API polling."""
 
     config_entry: ConfigEntry
 
@@ -47,7 +47,7 @@ class WeightWatchersDataUpdateCoordinator(
         try:
             return await self.api.async_get_points_summary()
         except WeightWatchersAuthError as err:
-            raise ConfigEntryAuthFailed("WeightWatchers authentication failed") from err
+            raise ConfigEntryAuthFailed("Weight Watchers authentication failed") from err
         except WeightWatchersConnectionError as err:
             raise UpdateFailed(f"Connection error: {err}") from err
         except WeightWatchersError as err:

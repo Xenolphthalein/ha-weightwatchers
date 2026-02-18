@@ -1,4 +1,4 @@
-"""Config flow for WeightWatchers."""
+"""Config flow for Weight Watchers."""
 
 from __future__ import annotations
 
@@ -23,7 +23,7 @@ def _entry_unique_id(region: str, username: str) -> str:
 
 
 class WeightWatchersConfigFlow(ConfigFlow, domain=DOMAIN):
-    """Handle a config flow for WeightWatchers."""
+    """Handle a config flow for Weight Watchers."""
 
     VERSION = 1
 
@@ -48,7 +48,7 @@ class WeightWatchersConfigFlow(ConfigFlow, domain=DOMAIN):
                 self._abort_if_unique_id_configured()
 
                 return self.async_create_entry(
-                    title=f"WeightWatchers ({username})",
+                    title=f"Weight Watchers ({username})",
                     data={
                         CONF_REGION: region,
                         CONF_USERNAME: username,
@@ -167,7 +167,7 @@ class WeightWatchersConfigFlow(ConfigFlow, domain=DOMAIN):
 
 
 class WeightWatchersOptionsFlow(OptionsFlow):
-    """Handle WeightWatchers options."""
+    """Handle Weight Watchers options."""
 
     def __init__(self, config_entry: ConfigEntry) -> None:
         self.config_entry = config_entry
@@ -194,7 +194,7 @@ class WeightWatchersOptionsFlow(OptionsFlow):
                 self.hass.config_entries.async_update_entry(
                     self.config_entry,
                     data=entry_data,
-                    title=f"WeightWatchers ({entry_data[CONF_USERNAME]})",
+                    title=f"Weight Watchers ({entry_data[CONF_USERNAME]})",
                     unique_id=new_unique_id,
                 )
                 await self.hass.config_entries.async_reload(self.config_entry.entry_id)

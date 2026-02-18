@@ -1,4 +1,4 @@
-"""Sensor platform for WeightWatchers."""
+"""Sensor platform for Weight Watchers."""
 
 from __future__ import annotations
 
@@ -81,7 +81,7 @@ async def async_setup_entry(
 class WeightWatchersPointSensor(
     CoordinatorEntity[WeightWatchersDataUpdateCoordinator], SensorEntity
 ):
-    """Representation of a WeightWatchers points sensor."""
+    """Representation of a Weight Watchers points sensor."""
 
     entity_description: WeightWatchersSensorEntityDescription
     _attr_has_entity_name = True
@@ -99,16 +99,16 @@ class WeightWatchersPointSensor(
         self._attr_unique_id = f"{base_id}_{description.key}"
         account_slug = slugify(entry.data.get(CONF_USERNAME, "account"))
         self._attr_suggested_object_id = (
-            f"weightwatchers_{account_slug}_{description.key}"
+            f"weight_watchers_{account_slug}_{description.key}"
         )
 
         username = entry.data.get(CONF_USERNAME, "account")
         region = entry.data.get(CONF_REGION, "WW")
         self._attr_device_info = DeviceInfo(
             identifiers={(DOMAIN, entry.entry_id)},
-            name=f"WeightWatchers {username}",
+            name=f"Weight Watchers {username}",
             model=f"Region {region}",
-            manufacturer="WeightWatchers",
+            manufacturer="Weight Watchers",
             entry_type=DeviceEntryType.SERVICE,
         )
 

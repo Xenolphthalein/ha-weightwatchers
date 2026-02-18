@@ -2,8 +2,8 @@
   "config": {
     "step": {
       "user": {
-        "title": "WeightWatchers",
-        "description": "Gib deine WeightWatchers-Kontodaten ein.",
+        "title": "Weight Watchers",
+        "description": "Gib deine Weight Watchers-Kontodaten ein.",
         "data": {
           "region": "Region",
           "username": "Benutzername / E-Mail",
@@ -11,8 +11,8 @@
         }
       },
       "reauth_confirm": {
-        "title": "WeightWatchers erneut authentifizieren",
-        "description": "Deine WeightWatchers-Anmeldedaten sind nicht mehr gueltig.",
+        "title": "Weight Watchers erneut authentifizieren",
+        "description": "Deine Weight Watchers-Anmeldedaten sind nicht mehr gueltig.",
         "data": {
           "username": "Benutzername / E-Mail",
           "password": "Passwort"
@@ -20,19 +20,19 @@
       }
     },
     "error": {
-      "cannot_connect": "Verbindung zu WeightWatchers fehlgeschlagen.",
+      "cannot_connect": "Verbindung zu Weight Watchers fehlgeschlagen.",
       "invalid_auth": "Authentifizierung fehlgeschlagen. Pruefe Benutzername, Passwort und Region.",
       "unknown": "Ein unerwarteter Fehler ist aufgetreten."
     },
     "abort": {
-      "already_configured": "Dieses WeightWatchers-Konto ist bereits konfiguriert.",
+      "already_configured": "Dieses Weight Watchers-Konto ist bereits konfiguriert.",
       "wrong_account": "Die erneute Authentifizierung muss mit demselben Konto erfolgen."
     }
   },
   "options": {
     "step": {
       "init": {
-        "title": "WeightWatchers-Optionen",
+        "title": "Weight Watchers-Optionen",
         "description": "Lege fest, welchen Regions-Endpunkt dieses Konto verwendet.",
         "data": {
           "region": "Region"

@@ -1,0 +1,14 @@
+{
+  "domain": "weight_watchers",
+  "name": "Weight Watchers",
+  "codeowners": [
+    "@xenolphthalein"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/Xenolphthalein/ha-weight-watchers",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/Xenolphthalein/ha-weight-watchers/issues",
+  "requirements": [],
+  "version": "1.0.0"
+}

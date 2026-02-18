@@ -1,4 +1,4 @@
-"""API client for WeightWatchers."""
+"""API client for Weight Watchers."""
 
 from __future__ import annotations
 
@@ -40,7 +40,7 @@ class WeightWatchersPointsSnapshot:
 
 
 class WeightWatchersApiClient:
-    """Async client for WeightWatchers web APIs."""
+    """Async client for Weight Watchers web APIs."""
 
     def __init__(
         self,
@@ -117,7 +117,7 @@ class WeightWatchersApiClient:
                 body = await response.json(content_type=None)
         except (TimeoutError, aiohttp.ClientError) as err:
             raise WeightWatchersConnectionError(
-                "Unable to reach WeightWatchers login API"
+                "Unable to reach Weight Watchers login API"
             ) from err
 
         token_id = body.get("data", {}).get("tokenId")
@@ -164,7 +164,7 @@ class WeightWatchersApiClient:
                 redirect_url = response.headers.get("Location", "")
         except (TimeoutError, aiohttp.ClientError) as err:
             raise WeightWatchersConnectionError(
-                "Unable to reach WeightWatchers auth API"
+                "Unable to reach Weight Watchers auth API"
             ) from err
 
         query = parse_qs(urlsplit(redirect_url).fragment)
@@ -210,7 +210,7 @@ class WeightWatchersApiClient:
                 body = await response.json(content_type=None)
         except (TimeoutError, aiohttp.ClientError) as err:
             raise WeightWatchersConnectionError(
-                "Unable to reach WeightWatchers CMX API"
+                "Unable to reach Weight Watchers CMX API"
             ) from err
 
         details = body.get("pointsDetails")

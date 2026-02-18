@@ -1,8 +1,8 @@
-"""Constants for the WeightWatchers integration."""
+"""Constants for the Weight Watchers integration."""
 
 from datetime import timedelta
 
-DOMAIN = "weightwatchers"
+DOMAIN = "weight_watchers"
 
 PLATFORMS: list[str] = ["sensor"]
 
@@ -32,4 +32,4 @@ REGION_TO_DOMAIN: dict[str, str] = {
 CMX_SUMMARY_ENDPOINT = "/api/v4/cmx/operations/composed/members/~/my-day-summary/{date}"
 
 WW_PRIVACY_SETTINGS = '{"doNotTrack":0,"doNotSell":0}'
-USER_AGENT = "HomeAssistant-WeightWatchers/1.0"
+USER_AGENT = "HomeAssistant-Weight-Watchers/1.0"
