@@ -49,8 +49,8 @@ jobs:
         shell: bash
         run: |
           mkdir -p dist
-          cd custom_components
-          zip -r ../dist/weight_watchers.zip weight_watchers
+          cd custom_components/weight_watchers
+          zip -r ../../dist/weight_watchers.zip . -x "__pycache__/*" "*.pyc"
 
       - name: Create GitHub release
         uses: softprops/action-gh-release@v2
