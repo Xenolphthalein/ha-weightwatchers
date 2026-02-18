@@ -23,7 +23,7 @@ jobs:
         shell: bash
         run: |
           TAG="${GITHUB_REF_NAME}"
-          if [[ ! "$TAG" =~ ^[0-9]{4}\.(?:[1-9]|1[0-2])\.[0-9]+$ ]]; then
+          if [[ ! "$TAG" =~ ^[0-9]{4}\.([1-9]|1[0-2])\.[0-9]+$ ]]; then
             echo "Invalid tag '$TAG'. Expected FULL_YEAR.UNPADDED_MONTH.PATCH_VERSION (e.g. 2026.2.1)."
             exit 1
           fi
